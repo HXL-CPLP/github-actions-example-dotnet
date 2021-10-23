@@ -21,6 +21,9 @@ Trivia:
         - [Documentação por plataforma de desenvolvimento](#documentação-por-plataforma-de-desenvolvimento)
             - [Android (termux)](#android-termux)
             - [Linux-like](#linux-like)
+- [https://platform.uno/docs/articles/get-started-vscode.html](#httpsplatformunodocsarticlesget-started-vscodehtml)
+- [https://platform.uno/docs/articles/get-started-with-linux.html](#httpsplatformunodocsarticlesget-started-with-linuxhtml)
+- [278MB +, mono, csharp, ...](#278mb--mono-csharp-)
             - [Online](#online)
             - [Windows-like](#windows-like)
         - [Referências adicionais](#referências-adicionais)
@@ -115,7 +118,28 @@ dotnet run
 ### publishing-with-visual-studio-code _________________________________________
 # @see https://docs.microsoft.com/pt-br/dotnet/core/tutorials/publishing-with-visual-studio-code
 dotnet publish --configuration Release
+
+# ./bin/Release/net5.0/programma-exemplum-dotnet
+
 ```
+
+<!--
+
+# https://platform.uno/docs/articles/get-started-vscode.html
+# https://platform.uno/docs/articles/get-started-with-linux.html
+
+sudo apt-get install gtk+3.0 
+# 278MB +, mono, csharp, ...
+
+cd /workspace/git/temp
+
+dotnet new -i Uno.ProjectTemplates.Dotnet
+dotnet new unoapp -o MyUnoApp
+
+cd MyUnoApp/
+cd MyUnoApp.Skia.Gtk/
+dotnet run
+-->
 
 #### Online
 

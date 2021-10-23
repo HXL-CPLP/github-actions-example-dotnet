@@ -1,5 +1,5 @@
 
-# ARCHIVUM:        .github/workflows/05-dotnet-action.yml
+# ARCHIVUM:        .github/workflows/06-dotnet-action-windows.yml
 # LICENTIAM:        Dominium publicum
 # SPDX-License-Identifier: Unlicense
 # DOCUMENTORUM:     Links:
@@ -15,7 +15,8 @@ on:
 
 jobs:
   dotnet-action:
-    runs-on: ubuntu-latest
+    # runs-on: ubuntu-latest
+    runs-on: windows-latest
     name: Dotnet ${{ matrix.dotnet }} sample
     strategy:
       matrix:
