@@ -1,4 +1,5 @@
-﻿using System;
+﻿// SPDX-License-Identifier: Unlicense
+using System;
 
 namespace programma_exemplum_dotnet
 {
