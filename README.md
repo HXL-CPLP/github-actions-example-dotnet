@@ -1,5 +1,7 @@
 # Programma exemplum .NET
-Referência de aplicações da comunidade feitas em .NET https://github.com/HXL-CPLP/forum/issues/61
+**_Um_ exemplo de como estruturar aplicação .NET com integração com
+[GitHub Actions](https://docs.github.com/pt/actions) e testes unitários**.
+Veja <https://github.com/HXL-CPLP/forum/issues/61>.
 
 <!--
 Trivia:
@@ -7,32 +9,44 @@ Trivia:
 - exemplum, https://en.wiktionary.org/wiki/exemplum#Latin
 -->
 
-## Links
+---
 
-- **Automation**
-  - **GitHub Actions**
-    - https://docs.github.com/pt/actions
-  - **.NET GitHub Action**
-    - https://github.com/actions/setup-dotnet
-- **Code**
-  - **Documentação do .NET (oficial)**
-    - https://docs.microsoft.com/pt-br/dotnet/
-    - **.NET Linux, Ubuntu**
-      - https://docs.microsoft.com/pt-br/dotnet/core/install/linux-ubuntu
-  - **Guias Rápidos**
-    - https://docs.microsoft.com/pt-br/dotnet/core/tutorials/with-visual-studio-code
-  - **Code Templates**
-    - https://github.com/topics/dotnet-template
-- **IDE**
-  - **VSCode**
-    - **Extensions**:
-      - https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp
+**Índice de conteúdo**
 
-## Quickstart
-- <https://docs.microsoft.com/pt-br/dotnet/core/tutorials/with-visual-studio-code>
+<!-- TOC -->
 
-### Android (termux)
-> TODO: https://github.com/EticaAI/inclusao-digital
+- [Programma exemplum .NET](#programma-exemplum-net)
+    - [Documentação](#documentação)
+        - [Limitações explícitas](#limitações-explícitas)
+        - [Documentação por plataforma de desenvolvimento](#documentação-por-plataforma-de-desenvolvimento)
+            - [Android (termux)](#android-termux)
+            - [Linux-like](#linux-like)
+            - [Online](#online)
+            - [Windows-like](#windows-like)
+        - [Referências adicionais](#referências-adicionais)
+    - [Licença](#licença)
+
+<!-- /TOC -->
+---
+
+
+## Documentação
+
+### Limitações explícitas
+
+- **Os _entregáveis_ deste repositório estão principalmente na
+  pasta [.github/workflows](.github/workflows)**
+- **Explicitamente, a forma como os códigos em C# foram usadas aqui são mais
+  simples do que seria usado em produção**
+- (...)
+
+### Documentação por plataforma de desenvolvimento
+> Nota: a maior parte do rascunho aqui foi baseado em
+> <https://docs.microsoft.com/pt-br/dotnet/core/tutorials/with-visual-studio-code>
+> e testado em Ubuntu 20.04, o que implica que possivelmente é aplicável em
+> outras plataformas.
+
+#### Android (termux)
 
 ```bash
 # _[por-Latn]
@@ -40,11 +54,12 @@ Trivia:
 # Android (termux)?
 # Editar aplicação DEPOIS de todo pipeline pronto online certamente é
 # (já que pessoa poderia usar até GitHub web).
+# TODO: https://github.com/EticaAI/inclusao-digital
 # [por-Latn]_
 
 ```
 
-### Linux-like
+#### Linux-like
 ```bash
 #### programma-exemplum-dotnet: Linux
 # @see https://docs.microsoft.com/pt-br/dotnet/core/tutorials/with-visual-studio-code
@@ -98,13 +113,13 @@ dotnet run
 dotnet publish --configuration Release
 ```
 
-## Online
+#### Online
 
 > TODO:
 > - https://vscode.dev/ (?)
 > - https://github.dev/ (?)
 
-## Windows-like
+#### Windows-like
 
 ```bash
 # @see https://docs.microsoft.com/pt-br/dotnet/core/tutorials/with-visual-studio-code
@@ -112,7 +127,32 @@ dotnet publish --configuration Release
 # TODO: windows
 ```
 
-# Licentiam
+### Referências adicionais
+
+- **Automation**
+  - **GitHub Actions**
+    - https://docs.github.com/pt/actions
+  - **.NET GitHub Action**
+    - https://github.com/actions/setup-dotnet
+- **Code**
+  - **Documentação do .NET (oficial)**
+      - https://docs.microsoft.com/pt-br/dotnet/
+      - **Avançado, testes**
+        - https://docs.microsoft.com/pt-br/dotnet/core/testing/
+        - https://docs.microsoft.com/pt-br/dotnet/core/tools/dotnet-test
+    - **.NET Linux, Ubuntu**
+      - https://docs.microsoft.com/pt-br/dotnet/core/install/linux-ubuntu
+  - **Guias Rápidos**
+    - https://docs.microsoft.com/pt-br/dotnet/core/tutorials/with-visual-studio-code
+  - **Code Templates**
+    - https://github.com/topics/dotnet-template
+- **IDE**
+  - **VSCode**
+    - **Extensions**:
+      - https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp
+
+
+## Licença
 
 [![Dominium publicum](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://unlicense.org/)
 
