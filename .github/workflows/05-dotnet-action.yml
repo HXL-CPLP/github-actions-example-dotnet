@@ -24,8 +24,15 @@ jobs:
 
     steps:
 
+      #### _____________________________________________________________________
+      # _[por-Latn]
+      # Passo comum em todo GitHub action: obtem uma cópia do repositório
+      # para máquina que esta rodando os testes
+      # [por-Latn]_
       - uses: actions/checkout@v2
 
+      #### _____________________________________________________________________
+      # @see https://github.com/actions/setup-dotnet
       - uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{ matrix.dotnet }}
@@ -34,4 +41,15 @@ jobs:
 
       - run: dotnet test programma-exemplum-dotnet.csproj
 
+      # _[por-Latn]
+      # É possível usar GitHub actions para publicar pacotes, e isso envolve
+      # usar opões extras documentadas em https://github.com/actions/setup-dotnet
+      # A forma como variável NUGET_AUTH_TOKEN é salva pode requerer
+      # certos cuidados. Vide
+      # https://docs.github.com/pt/actions/security-guides/security-hardening-for-github-actions
+      #
+      # Caso seu projeto tenha relação com algo humanitário, colaboradores
+      # do HXL-CPLP podem ajudar nessa etapa.
+      # [por-Latn]_
+      - run: dotnet publish programma-exemplum-dotnet.csproj
       # TODO: implement tests https://docs.microsoft.com/pt-br/dotnet/core/tutorials/testing-with-cli

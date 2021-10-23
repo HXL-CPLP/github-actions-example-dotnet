@@ -40,6 +40,10 @@ Trivia:
   simples do que seria usado em produção**
 - (...)
 
+> TODO: dividir em subdiretórios (talvez mais de uma aplicação)
+
+> TODO: talvez fazer testes com ao menos uma aplicação GUI
+
 ### Documentação por plataforma de desenvolvimento
 > Nota: a maior parte do rascunho aqui foi baseado em
 > <https://docs.microsoft.com/pt-br/dotnet/core/tutorials/with-visual-studio-code>
@@ -140,6 +144,8 @@ dotnet publish --configuration Release
       - **Avançado, testes**
         - https://docs.microsoft.com/pt-br/dotnet/core/testing/
         - https://docs.microsoft.com/pt-br/dotnet/core/tools/dotnet-test
+        - https://docs.microsoft.com/pt-br/dotnet/core/testing/unit-testing-best-practices
+        - https://github.com/dariusz-wozniak/List-of-Testing-Tools-and-Frameworks-for-.NET
     - **.NET Linux, Ubuntu**
       - https://docs.microsoft.com/pt-br/dotnet/core/install/linux-ubuntu
   - **Guias Rápidos**
