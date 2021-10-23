@@ -29,9 +29,7 @@ Trivia:
       - https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp
 
 ## Quickstart
-
-> https://vscode.dev/ (?)
-> https://github.dev/
+- <https://docs.microsoft.com/pt-br/dotnet/core/tutorials/with-visual-studio-code>
 
 ### Android (termux)
 > TODO: https://github.com/EticaAI/inclusao-digital
@@ -55,7 +53,7 @@ Trivia:
 # @see https://code.visualstudio.com/download
 # @see https://snapcraft.io/code
 
-### .NET setup
+### .NET setup _________________________________________________________________
 # @see https://docs.microsoft.com/pt-br/dotnet/core/install/linux-ubuntu
 cd /tmp
 wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
@@ -68,21 +66,51 @@ sudo apt-get update; \
   sudo apt-get update && \
   sudo apt-get install -y dotnet-sdk-5.0
 
-### Bootstrapping template
+### Bootstrapping template _____________________________________________________
 # _[por-Latn]
 # Este comando vai criar mais arquivos do que os que estão commitados no
 # GitHub
 # [por-Latn]_
 dotnet new console --framework net5.0
 
+### dotnet build _______________________________________________________________
+dotnet build
+
+### run ________________________________________________________________________
+## historiam/v0/Program.cs.bak .................................................
+dotnet run
+# > Hello World!
+
+## historiam/v1/Program.cs.bak .................................................
+
+## historiam/v1/Program.cs.cs.bak ..............................................
+# Edit Program.cs (backup at versions/v1/Program.cs)
+dotnet run
+# > What is your name?
+# $ rocha
+# >
+# > Hello, rocha, on 23/10/2021 at 15:59!
+# Press any key to exit...
+
+
+### publishing-with-visual-studio-code _________________________________________
+# @see https://docs.microsoft.com/pt-br/dotnet/core/tutorials/publishing-with-visual-studio-code
+dotnet publish --configuration Release
 ```
+
+## Online
+
+> TODO:
+> - https://vscode.dev/ (?)
+> - https://github.dev/ (?)
 
 ## Windows-like
 
 ```bash
 # @see https://docs.microsoft.com/pt-br/dotnet/core/tutorials/with-visual-studio-code
-```
 
+# TODO: windows
+```
 
 # Licentiam
 
