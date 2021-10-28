@@ -2,192 +2,43 @@
 **[rascunho] Exemplo automação com [GitHub Actions](https://github.com/features/actions)
 para aplicações plataforma cruzada [.NET](https://docs.microsoft.com/pt-br/dotnet/).**
 
+## Entregáveis
+### Exemplo de GitHub Actions com aplicações Electron
 
-> - **Contexto**:
->   - _HXL-CPLP/forum#61: Referências e apoio para automação, testes de qualidade e distribuição em canais de desktop e móvel para aplicações de uso humanitário_
->     - https://github.com/HXL-CPLP/forum/issues/61
->   - _frontendbr/forum/discussions/2182: Referências de estudos de caso de uso avançado do GitHub Actions (ilimitado e gratuito para Open Source) inexplorado no Brasil; foco cross-platform_
->     - https://github.com/frontendbr/forum/discussions/2182
+- **[.github/workflows/](.github/workflows/)**
+- `github.com/<usuario-ou-organizacao>/actions/`
 
+Os entreǵáveis principais são os arquivos YAML em
+[.github/workflows/](.github/workflows/) que _idealmente_ deveriam estar
+documentados ao ponto de ser inspirar implementações realistas.
 
-<!--
-Trivia:
-- programma, https://en.wiktionary.org/wiki/programma#Latin
-- exemplum, https://en.wiktionary.org/wiki/exemplum#Latin
--->
+**Aviso**: Este repositório também contém uma ou mais aplicações simples
+que permitem o mínimo para testar como as GitHub Actions estão integradas,
+mas não há intenção de manter dependências delas atualizadas.
 
----
+#### Anotações adicionais
 
-**Índice de conteúdo**
+- **[diario-de-bordo.sh](diario-de-bordo.sh)**
+- `github.com/<usuario-ou-organizacao>/issues/1`
 
-<!-- TOC -->
+Questões não relacionadas ao GitHub actions, em especial anotações internas
+sobre como aplicação de exemplo foi obtida, estão em
+[diario-de-bordo.sh](diario-de-bordo.sh).
 
-- [Exemplo de GitHub Actions com aplicações .NET](#exemplo-de-github-actions-com-aplicações-net)
-    - [Documentação](#documentação)
-        - [Limitações explícitas](#limitações-explícitas)
-        - [Documentação por plataforma de desenvolvimento](#documentação-por-plataforma-de-desenvolvimento)
-            - [Android (termux)](#android-termux)
-            - [Linux-like](#linux-like)
-            - [Online](#online)
-            - [Windows-like](#windows-like)
-        - [Referências adicionais](#referências-adicionais)
-    - [Licença](#licença)
+Caso este projeto não seja uma bifurcação, o primeiro  pode ter mais
+informações.
 
-<!-- /TOC -->
----
-
-
-## Documentação
-
-### Limitações explícitas
-
-- **Os _entregáveis_ deste repositório estão principalmente na
-  pasta [.github/workflows](.github/workflows)**
-- **Explicitamente, a forma como os códigos em C# foram usadas aqui são mais
-  simples do que seria usado em produção**
-- (...)
-
-> TODO: dividir em subdiretórios (talvez mais de uma aplicação)
-
-> TODO: talvez fazer testes com ao menos uma aplicação GUI
-
-### Documentação por plataforma de desenvolvimento
-> Nota: a maior parte do rascunho aqui foi baseado em
-> <https://docs.microsoft.com/pt-br/dotnet/core/tutorials/with-visual-studio-code>
-> e testado em Ubuntu 20.04, o que implica que possivelmente é aplicável em
-> outras plataformas.
-
-#### Android (termux)
-
-```bash
-# _[por-Latn]
-# Pergunta: é possível fazer bootstrapping de aplicação .NET usando
-# Android (termux)?
-# Editar aplicação DEPOIS de todo pipeline pronto online certamente é
-# (já que pessoa poderia usar até GitHub web).
-# TODO: https://github.com/EticaAI/inclusao-digital
-# [por-Latn]_
-
-```
-
-#### Linux-like
-```bash
-#### programma-exemplum-dotnet: Linux
-# @see https://docs.microsoft.com/pt-br/dotnet/core/tutorials/with-visual-studio-code
-
-### VSCode install
-# @see https://code.visualstudio.com/download
-# @see https://snapcraft.io/code
-
-### .NET setup _________________________________________________________________
-# @see https://docs.microsoft.com/pt-br/dotnet/core/install/linux-ubuntu
-cd /tmp
-wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
-rm packages-microsoft-prod.deb
-
-
-sudo apt-get update; \
-  sudo apt-get install -y apt-transport-https && \
-  sudo apt-get update && \
-  sudo apt-get install -y dotnet-sdk-5.0
-
-### Bootstrapping template _____________________________________________________
-# _[por-Latn]
-# Este comando vai criar mais arquivos do que os que estão commitados no
-# GitHub
-# [por-Latn]_
-dotnet new console --framework net5.0
-
-### dotnet build _______________________________________________________________
-dotnet build
-
-### run ________________________________________________________________________
-## historiam/v0/Program.cs.bak .................................................
-dotnet run
-# > Hello World!
-
-## historiam/v1/Program.cs.bak .................................................
-
-## historiam/v1/Program.cs.cs.bak ..............................................
-# Edit Program.cs (backup at versions/v1/Program.cs)
-dotnet run
-# > What is your name?
-# $ rocha
-# >
-# > Hello, rocha, on 23/10/2021 at 15:59!
-# Press any key to exit...
-
-
-### publishing-with-visual-studio-code _________________________________________
-# @see https://docs.microsoft.com/pt-br/dotnet/core/tutorials/publishing-with-visual-studio-code
-dotnet publish --configuration Release
-
-# ./bin/Release/net5.0/programma-exemplum-dotnet
-
-```
-
-<!--
-
-- https://platform.uno/docs/articles/get-started-vscode.html
-- https://platform.uno/docs/articles/get-started-with-linux.html
-
-sudo apt-get install gtk+3.0 
-  # 278MB +, mono, csharp, ...
-
-cd /workspace/git/temp
-
-dotnet new -i Uno.ProjectTemplates.Dotnet
-dotnet new unoapp -o MyUnoApp
-
-cd MyUnoApp/
-cd MyUnoApp.Skia.Gtk/
-dotnet run
--->
-
-#### Online
-
-> TODO:
-> - https://vscode.dev/ (?)
-> - https://github.dev/ (?)
-
-#### Windows-like
-
-```bash
-# @see https://docs.microsoft.com/pt-br/dotnet/core/tutorials/with-visual-studio-code
-
-# TODO: windows
-```
-
-### Referências adicionais
-
-- **Automation**
-  - **GitHub Actions**
-    - https://docs.github.com/pt/actions
-  - **.NET GitHub Action**
-    - https://github.com/actions/setup-dotnet
-- **Code**
-  - **Documentação do .NET (oficial)**
-      - https://docs.microsoft.com/pt-br/dotnet/
-      - **Avançado, testes**
-        - https://docs.microsoft.com/pt-br/dotnet/core/testing/
-        - https://docs.microsoft.com/pt-br/dotnet/core/tools/dotnet-test
-        - https://docs.microsoft.com/pt-br/dotnet/core/testing/unit-testing-best-practices
-        - https://github.com/dariusz-wozniak/List-of-Testing-Tools-and-Frameworks-for-.NET
-    - **.NET Linux, Ubuntu**
-      - https://docs.microsoft.com/pt-br/dotnet/core/install/linux-ubuntu
-  - **Guias Rápidos**
-    - https://docs.microsoft.com/pt-br/dotnet/core/tutorials/with-visual-studio-code
-  - **Code Templates**
-    - https://github.com/topics/dotnet-template
-- **IDE**
-  - **VSCode**
-    - **Extensions**:
-      - https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp
-
+## Sobre
+### Contexto:
+- _HXL-CPLP/forum#61: Referências e apoio para automação, testes de qualidade e distribuição em canais de desktop e móvel para aplicações de uso humanitário_
+  - https://github.com/HXL-CPLP/forum/issues/61
+- _frontendbr/forum/discussions/2182: Referências de estudos de caso de uso avançado do GitHub Actions (ilimitado e gratuito para Open Source) inexplorado no Brasil; foco cross-platform_
+  - https://github.com/frontendbr/forum/discussions/2182
 
 ## Licença
 
-[![Dominium publicum](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://unlicense.org/)
+[![Domínio Público](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://unlicense.org/)
 
-Licentiam: [Dominium publicum](https://unlicense.org/).
+Na medida do possível segundo a lei, [HXL-CPLP](https://hxl.etica.ai)
+renunciou a todos os direitos autorais e direitos conexos ou vizinhos a este
+trabalho para o [Domínio Público](UNLICENSE).
