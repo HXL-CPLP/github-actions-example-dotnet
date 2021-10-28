@@ -1,7 +1,14 @@
-# Programma exemplum .NET
-**_Um_ exemplo de como estruturar aplicação .NET com integração com
-[GitHub Actions](https://docs.github.com/pt/actions) e testes unitários**.
-Veja <https://github.com/HXL-CPLP/forum/issues/61>.
+# Exemplo de GitHub Actions com aplicações .NET
+**[rascunho] Exemplo automação com [GitHub Actions](https://github.com/features/actions)
+para aplicações plataforma cruzada [.NET](https://docs.microsoft.com/pt-br/dotnet/).**
+
+
+> - **Contexto**:
+>   - _HXL-CPLP/forum#61: Referências e apoio para automação, testes de qualidade e distribuição em canais de desktop e móvel para aplicações de uso humanitário_
+>     - https://github.com/HXL-CPLP/forum/issues/61
+>   - _frontendbr/forum/discussions/2182: Referências de estudos de caso de uso avançado do GitHub Actions (ilimitado e gratuito para Open Source) inexplorado no Brasil; foco cross-platform_
+>     - https://github.com/frontendbr/forum/discussions/2182
+
 
 <!--
 Trivia:
@@ -15,15 +22,12 @@ Trivia:
 
 <!-- TOC -->
 
-- [Programma exemplum .NET](#programma-exemplum-net)
+- [Exemplo de GitHub Actions com aplicações .NET](#exemplo-de-github-actions-com-aplicações-net)
     - [Documentação](#documentação)
         - [Limitações explícitas](#limitações-explícitas)
         - [Documentação por plataforma de desenvolvimento](#documentação-por-plataforma-de-desenvolvimento)
             - [Android (termux)](#android-termux)
             - [Linux-like](#linux-like)
-- [https://platform.uno/docs/articles/get-started-vscode.html](#httpsplatformunodocsarticlesget-started-vscodehtml)
-- [https://platform.uno/docs/articles/get-started-with-linux.html](#httpsplatformunodocsarticlesget-started-with-linuxhtml)
-- [278MB +, mono, csharp, ...](#278mb--mono-csharp-)
             - [Online](#online)
             - [Windows-like](#windows-like)
         - [Referências adicionais](#referências-adicionais)
@@ -125,11 +129,11 @@ dotnet publish --configuration Release
 
 <!--
 
-# https://platform.uno/docs/articles/get-started-vscode.html
-# https://platform.uno/docs/articles/get-started-with-linux.html
+- https://platform.uno/docs/articles/get-started-vscode.html
+- https://platform.uno/docs/articles/get-started-with-linux.html
 
 sudo apt-get install gtk+3.0 
-# 278MB +, mono, csharp, ...
+  # 278MB +, mono, csharp, ...
 
 cd /workspace/git/temp
 
