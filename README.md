@@ -2,8 +2,11 @@
 **[rascunho] Exemplo automação com [GitHub Actions](https://github.com/features/actions)
 para aplicações plataforma cruzada [.NET](https://docs.microsoft.com/pt-br/dotnet/).**
 
+[![GitHub Actions Logo; © 2021 GitHub, Inc](readme-images/github-actions.png)](https://github.com/features/actions)
+[![.NET logo](readme-images/dotnet-pseudo-logo.png)](https://www.electronjs.org/)
+
 ## Entregáveis
-### Exemplo de GitHub Actions com aplicações Electron
+### Exemplo de GitHub Actions com aplicações .NET
 
 - **[.github/workflows/](.github/workflows/)**
 - `github.com/<usuario-ou-organizacao>/actions/`
@@ -34,6 +37,17 @@ informações.
   - https://github.com/HXL-CPLP/forum/issues/61
 - _frontendbr/forum/discussions/2182: Referências de estudos de caso de uso avançado do GitHub Actions (ilimitado e gratuito para Open Source) inexplorado no Brasil; foco cross-platform_
   - https://github.com/frontendbr/forum/discussions/2182
+
+---
+
+> _Domínio público significa que cada problema só precisa ser resolvido uma vez_
+> — [frase adaptada de @naval](https://twitter.com/naval/status/1444366754650656770)
+
+Embora domínio público facilite reuso com outras licenças, bem como
+reuso sem necessidade de citar fonte (o que é útil para inclusão em outros
+materiais educacionais, inclusive fins comerciais) o principal motivo para essa
+abordagem pela organização mantenedora atual (no caso o HXL-CPLP) é que
+licenciamento semelhante a domínio público (Unlicense, CC0, 0BSD) simplifica muito, **muito mesmo**, o reuso no meio humanitário.
 
 ## Licença
 

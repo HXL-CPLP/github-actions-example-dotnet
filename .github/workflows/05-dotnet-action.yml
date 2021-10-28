@@ -1,10 +1,7 @@
+# SPDX-License-Identifier: Unlicense OR 0BSD
 
-# ARCHIVUM:        .github/workflows/05-dotnet-action.yml
-# LICENTIAM:        Dominium publicum
-# SPDX-License-Identifier: Unlicense
-# DOCUMENTORUM:     Links:
-#                     - https://docs.github.com/pt/actions
-#                     - https://github.com/actions/setup-dotnet
+# - https://docs.github.com/pt/actions
+# - https://github.com/actions/setup-dotnet
 
 name: dotnet-action
 
