@@ -18,5 +18,6 @@ Cada arquivo de fluxo de trabalho **pode ser usado de forma independente**
 e, além da sintaxe operacional (e, em parte, nomes em inglês), toda documentação
 adicional (que pode ajudar pessoas novas em automação) está em português.
 
-### [`05-dotnet-action.yml`](05-dotnet-action.yml)
-### [`06-dotnet-action-windows.yml`](06-dotnet-action-windows.yml)
+### [`03-dotnet-cli-quick-test.yml`](03-dotnet-cli-quick-test.yml)
+### [`04-dotnet-cli-full-test.yml`](04-dotnet-cli-full-test.yml)
+### [`06-dotnet-cli-release.yml`](06-dotnet-cli-release.yml)

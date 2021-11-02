@@ -37,12 +37,14 @@ jobs:
 
       - run: dotnet test programma-exemplum-dotnet.csproj
 
+      # _[por-Latn] Lista arquivos locais (útil para saber o que fazer upload [por-Latn]_
+      - run: dir
       - run: tree /f
 
   #### dotnet-cli-release-ubuntu-latest ########################################
   dotnet-cli-release-ubuntu-latest:
     runs-on: ubuntu-latest
-    name: dotnet-cli-release-windows-latest
+    name: dotnet-cli-release-ubuntu-latest
     steps:
 
       #### _____________________________________________________________________
@@ -64,12 +66,14 @@ jobs:
 
       - run: dotnet test programma-exemplum-dotnet.csproj
 
+      # _[por-Latn] Lista arquivos locais (útil para saber o que fazer upload [por-Latn]_
       - run: ls -lha
+      - run: tree
 
   #### dotnet-cli-release-macos-latest #########################################
   dotnet-cli-release-macos-latest:
     runs-on: macos-latest
-    name: dotnet-cli-release-windows-latest
+    name: dotnet-cli-release-macos-latest
     steps:
 
       #### _____________________________________________________________________
@@ -89,10 +93,11 @@ jobs:
       # - run: dotnet build programma-exemplum-dotnet.csproj
       - run: dotnet publish --configuration Release programma-exemplum-dotnet.csproj
 
-      - run: dotnet test programma-exemplum-dotnet.csproj
-
+      # _[por-Latn] Lista arquivos locais (útil para saber o que fazer upload [por-Latn]_
       - run: ls -lha
+      - run: tree
 
+      - run: dotnet test programma-exemplum-dotnet.csproj
 
       ##### TODO: continue .....................................................
       # _[por-Latn]
