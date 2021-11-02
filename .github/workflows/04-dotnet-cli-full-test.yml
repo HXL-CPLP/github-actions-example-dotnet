@@ -3,21 +3,29 @@
 # - https://docs.github.com/pt/actions
 # - https://github.com/actions/setup-dotnet
 
-name: dotnet-action
+name: dotnet-cli-full-test
 
 on:
+  # _[por-Latn]
+  # Execute este fluxo de trabalho em qualquer evento push (sem restrição
+  # de branch) e pull requests.
+  # [por-Latn]_
+  pull_request:
+    # branches:
+    #   - main
   push:
-    branches:
-      - main
-
+    # branches:
+    #   - main
 jobs:
-  dotnet-action:
-    runs-on: ubuntu-latest
-    name: Dotnet ${{ matrix.dotnet }} sample
+  dotnet-cli-full-test:
+    runs-on: "${{ matrix.os }}"
+    name: "dotnet-cli-full-test [.NET: ${{ matrix.dotnet }}] [OS: ${{ matrix.dotnet }}]"
     strategy:
       matrix:
         # dotnet: [ '2.1.x', '3.1.x', '5.0.x' ]
         dotnet: [ '5.0.x' ]
+        os: [ windows-latest, ubuntu-latest ]
+        # os: [ windows-latest, ubuntu-latest, macos-latest ]
 
     steps:
 
