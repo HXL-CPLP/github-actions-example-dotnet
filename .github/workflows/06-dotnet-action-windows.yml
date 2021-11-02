@@ -52,3 +52,15 @@ jobs:
       # [por-Latn]_
       - run: dotnet publish programma-exemplum-dotnet.csproj
       # # ./bin/Release/net5.0/programma-exemplum-dotnet
+
+      - name: "GitHub Release: update/publish lastest"
+        uses: docker://antonyurchenko/git-release:latest
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          UNRELEASED: "update"
+        # with:
+        #   # programma-exemplum-flutter.app 168mb, too much
+        #   # INFO uploading asset: programma-exemplum-flutter.aab
+        #   args: |
+        #     programma-exemplum-flutter.apk/app-release.apk
