@@ -32,7 +32,8 @@ jobs:
         with:
           dotnet-version: '5.0.x'
 
-      - run: dotnet build programma-exemplum-dotnet.csproj
+      # - run: dotnet build programma-exemplum-dotnet.csproj
+      - run: dotnet publish --configuration Release programma-exemplum-dotnet.csproj
 
       - run: dotnet test programma-exemplum-dotnet.csproj
 
@@ -40,8 +41,7 @@ jobs:
 
   #### dotnet-cli-release-ubuntu-latest ########################################
   dotnet-cli-release-ubuntu-latest:
-    # runs-on: ubuntu-latest
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     name: dotnet-cli-release-windows-latest
     steps:
 
@@ -59,7 +59,35 @@ jobs:
         with:
           dotnet-version: '5.0.x'
 
-      - run: dotnet build programma-exemplum-dotnet.csproj
+      # - run: dotnet build programma-exemplum-dotnet.csproj
+      - run: dotnet publish --configuration Release programma-exemplum-dotnet.csproj
+
+      - run: dotnet test programma-exemplum-dotnet.csproj
+
+      - run: ls -lha
+
+  #### dotnet-cli-release-macos-latest #########################################
+  dotnet-cli-release-macos-latest:
+    runs-on: macos-latest
+    name: dotnet-cli-release-windows-latest
+    steps:
+
+      #### _____________________________________________________________________
+      # _[por-Latn]
+      # Passo comum em todo GitHub action: obtem uma cópia do repositório
+      # para máquina que esta rodando os testes
+      # [por-Latn]_
+      - uses: actions/checkout@v2
+
+      #### _____________________________________________________________________
+      # @see https://github.com/actions/setup-dotnet
+      # @see https://github.com/timheuer/aspnet-core-sample-deploy/blob/master/.github/workflows/build-and-deploy.yml
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '5.0.x'
+
+      # - run: dotnet build programma-exemplum-dotnet.csproj
+      - run: dotnet publish --configuration Release programma-exemplum-dotnet.csproj
 
       - run: dotnet test programma-exemplum-dotnet.csproj
 
