@@ -19,13 +19,13 @@ on:
 jobs:
   dotnet-cli-full-test:
     runs-on: "${{ matrix.os }}"
-    name: "dotnet-cli-full-test [.NET: ${{ matrix.dotnet }}] [OS: ${{ matrix.dotnet }}]"
+    name: "dotnet-cli-full-test [.NET: ${{ matrix.dotnet }}] [OS: ${{ matrix.os }}]"
     strategy:
       matrix:
         # dotnet: [ '2.1.x', '3.1.x', '5.0.x' ]
         dotnet: [ '5.0.x' ]
-        os: [ windows-latest, ubuntu-latest ]
-        # os: [ windows-latest, ubuntu-latest, macos-latest ]
+        # os: [ windows-latest, ubuntu-latest ]
+        os: [ windows-latest, ubuntu-latest, macos-latest ]
 
     steps:
 

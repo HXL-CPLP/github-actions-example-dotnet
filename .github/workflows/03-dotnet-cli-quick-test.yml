@@ -3,7 +3,8 @@
 # - https://docs.github.com/pt/actions
 # - https://github.com/actions/setup-dotnet
 
-name: dotnet-quick-test
+# TODO: adicionar pelo menos ubuntu aqui
+name: dotnet-cli-quick-test
 
 on:
   # _[por-Latn]
@@ -16,8 +17,8 @@ on:
   push:
     # branches:
     #   - main
-    branches-ignore:
-      - '**' # disabled
+    # branches-ignore:
+    #   - '**' # disabled
 
 
 jobs:
@@ -32,25 +33,25 @@ jobs:
       # _[por-Latn] Clone o repositório para esta máquina de testes [por-Latn]_
       - uses: actions/checkout@v2
 
-      #### actions/setup-java __________________________________________________
-      # _[por-Latn] Prepare dependências Java [por-Latn]_
-      - uses: actions/setup-java@v1
-        with:
-          java-version: "12.x"
+      # #### actions/setup-java __________________________________________________
+      # # _[por-Latn] Prepare dependências Java [por-Latn]_
+      # - uses: actions/setup-java@v1
+      #   with:
+      #     java-version: "12.x"
 
-      #### subosito/flutter-action _____________________________________________
-      # @see https://github.com/marketplace/actions/flutter-action
+      # #### subosito/flutter-action _____________________________________________
+      # # @see https://github.com/marketplace/actions/flutter-action
 
-      - uses: subosito/flutter-action@v1
-        with:
-          # flutter-version: '1.20.2'
-          channel: "stable" # or: 'beta', 'dev' or 'master'
-      - run: dart --version
-      - run: flutter --version
-      - run: flutter pub get
+      # - uses: subosito/flutter-action@v1
+      #   with:
+      #     # flutter-version: '1.20.2'
+      #     channel: "stable" # or: 'beta', 'dev' or 'master'
+      # - run: dart --version
+      # - run: flutter --version
+      # - run: flutter pub get
 
-      # _[por-Latn] Execute testes do Flutter [por-Latn]_
-      - run: flutter test
+      # # _[por-Latn] Execute testes do Flutter [por-Latn]_
+      # - run: flutter test
 
   # dotnet-quick-test-okay ####################################################
   # _[por-Latn]
